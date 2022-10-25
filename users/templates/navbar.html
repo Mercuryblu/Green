@@ -1,0 +1,50 @@
+{% load static %}
+{% static "" as baseUrl %}
+   {% comment %} <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top ">
+  <a class="navbar" href="{% url 'pybo:index' %}">
+  <h1 id="AGORA">AGORA</h1></a>
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+  </div>
+</nav>   {% endcomment %}
+
+
+ <div class="container-fluid sticky-top" style="height: 10px;">
+  <!-- <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span> -->
+  
+  <div id="menu" style="margin-top:-10px; " class="makright">
+      <!-- 마우스가 올라가는 부분 -->
+      <div></div>
+      <div id="slide" style=" font-size: 72px;color:red;padding-top: 20px;padding-bottom: 16px;font-family: 'Helvetica';">Menu</div>
+      <!-- 처음엔 안보였다 나중에 보이는 부분 -->
+      <div id="panel">
+          <ul>
+              <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+          <a href="{% url 'user:home' %}" style="color: black;">Home</a>
+              </li>
+              <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+          <a href="{% url 'user:archive' %}" style="color: black;">Archive</a>    
+              </li>
+              <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+          <a href="{% url 'quiz:start' %}" style="color: black;">Game</a>
+              </li>
+              <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+          <a href="{% url 'pybo:index' %}" style="color: black;">Agora</a>
+              </li>
+              <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+          <a href="{% url 'user:login' %}" style="color: black;">Login</a>
+          
+              </li>
+              <li style="border-bottom:solid black 3px; padding-top: 20%;padding-bottom: 20%;">
+                  <div>
+
+                  </div>
+                  
+              </li>
+
+          </ul>
+      </div>
+  </div>
+  </div>
+  <div style="font-family:'Helvetica';font-size: 72px;position:absolute;left:10px">Agora</div>
+  <div style="padding: 70px 0px;"></div>
+

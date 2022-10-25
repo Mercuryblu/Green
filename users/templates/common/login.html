@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-3">
+    <form method="post" class="post-form" action="{% url 'common:login' %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% include "error/form_error.html" %}
+        {% include "error/form_error.html" %}
+        <div class="form-group">
+            <label for="username">ID</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="ID를 입력해주세요." value="{{ form.username.value|default_if_none:'' }}">
+        </div>
+    <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD를 입력해주세요." value="{{ form.password.value|default_if_none:'' }}">
+    </div>
+        <button type="submit" class="btn btn-primary"><i class='fas fa-sign-in-alt'></i>Login</button>
+    </form>
+</div>
+{% endblock %}

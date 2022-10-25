@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'quizlist.css' %}" />
+    
+   <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        }
+      .container {
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
+      body{
+        margin: 0;
+      }
+     table{
+       background-color: white;
+       width: 100%;
+       height: 100%;
+     }
+     #img:hover{
+      background-image: url('{% static "move2.gif" %}');
+       background-repeat: no-repeat;
+       background-size: cover;
+       color: red;
+     }
+     table{
+       text-align: center;
+     } 
+     th,tr{
+       text-align: center;
+     }
+     .switch {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    ul{
+      list-style:none;
+      padding: 0;
+      }
+    
+      
+    
+    
+      #slide, #panel {
+          padding: 15px 0px;
+          text-align: center;
+          background-color: white;
+          border-left: solid 3px black;
+          border-bottom: solid 3px black; 
+          width: 20%;
+          height: 50%;
+          
+          /* border-top-left-radius: 10%;
+          border-top-right-radius: 10%; */
+      }
+      /* #penel의 스타일의 기본이 display:none으로 되어 있다.  */
+      #panel {
+          padding: 0px;
+          display: none;
+          background-color: white; 
+          /* border-bottom-left-radius: 10%;
+          border-bottom-right-radius: 10%; */
+          
+      }
+      .makright{
+        position: relative;
+        left: 81.5%;
+        top: 0px;
+    }
+
+   </style>
+</head>
+<body style="overflow-y: hidden; overflow-x: hidden">
+  <div class="container-fluid sticky-top" style="height: 5px;">
+    <!-- <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span> -->
+    <div id="menu" style="margin-top:-10px; " class="makright">
+        <!-- 마우스가 올라가는 부분 -->
+        <div></div>
+        <div id="slide" style=" font-size: 72px;color:red;padding-top: 20px;padding-bottom: 16px;font-family: 'Helvetica';">Menu</div>
+        <!-- 처음엔 안보였다 나중에 보이는 부분 -->
+        <div id="panel">
+            <ul>
+                <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+            <a href="{% url 'user:home' %}" style="color: black;">Home</a>
+                </li>
+                <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+            <a href="{% url 'user:archive' %}" style="color: black;">Archive</a>    
+                </li>
+                <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+            <a href="{% url 'quiz:start' %}" style="color: black;">Game</a>
+                </li>
+                <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+            <a href="{% url 'pybo:index' %}" style="color: black;">Agora</a>
+                </li>
+                <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 3px;padding-bottom: 3px;">
+            <a href="{% url 'user:login' %}" style="color: black;">Login</a>
+            
+                </li>
+                <li style="border-bottom:solid black 3px; padding-top: 80%;padding-bottom: 80%;">
+                    <div>
+
+                    </div>
+                    
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+    
+  <div class="container">
+  <table class="table" frame="void" border="2" bordercolor="black" >
+    <tbody>
+     <tr>
+       <th style="width:30%; height:80px"><h2 style="font-size:72px">QUIZ</h2></th>
+       <th style="width:40%"></th>
+       <th style="width:30%"></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td id="img">
+        <h2>START BUTTON</h2>
+        <div id="center">
+        <label class="switch">
+          <input type="checkbox" id="a" onclick="setTimeout(function() { 
+            location.href='/quiz/1/'; }, 1000);"/>
+          <span class="slider round"></span>
+        </label>
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th style="height:80px;"></th>
+      <th>
+        <p><MARQUEE>전기절약으로 지구가 행복해해요</MARQUEE></p>
+        <p><MARQUEE scrolldelay="100" direction="right">전기절약 습관으로 부자가 될 수 있습니다.</MARQUEE></p>
+      </th>
+      <th></th>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<script type='text/javascript'>
+  window.onpageshow = function (event) {
+    if (event.persisted) {
+      console.log(event.persisted)
+      document.getElementById('a').checked = false;
+    }
+    else {
+    }
+  }
+</script>
+<script src={%static "js/pannel.js"%}></script>
+</body>
+</html>

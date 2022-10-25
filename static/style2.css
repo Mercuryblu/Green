@@ -1,0 +1,116 @@
+*{
+  margin:0;
+padding:0;
+}
+body {
+  background-color:rgb(0, 0, 0);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.topnav {
+  position:relative;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  font-size:200%;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  color: rgb(255, 0, 0);
+}
+
+.content1{
+  display:block;
+}
+
+.content {
+  margin:0;
+  padding:0;
+}
+canvas {
+  display: block;
+ 
+  
+}
+
+.article{
+  float:right;
+  padding-top:0px;
+  padding-right:0px;
+  
+  background-color:rgb(0, 0, 0);
+  
+}
+
+.line01{
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 15px -5px rgba(0,0,0,0.4);
+  border-radius: 35px;
+
+  offset: path("M439.96,816.73l540.48-597.45h107.25L1305.33-21.3")auto;
+  animation:  moveto 10s infinite ease;
+} 
+@keyframes moveto{
+  0%{
+      offset-distance: 0%
+  }
+  100%{
+      offset-distance: 100%;
+  }}
+.line02{
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 15px -5px rgba(0,0,0,0.4);
+  border-radius: 35px;
+
+  offset: path("M386.94,333.07,142.76,603v37.28")auto;
+  animation:  moveto 10s infinite ease;
+} 
+@keyframes moveto{
+  0%{
+      offset-distance: 0%
+  }
+  100%{
+      offset-distance: 100%;
+}}
+.line00{
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 15px -5px rgba(0,0,0,0.4);
+  border-radius: 35px;
+
+  offset: path("M544.5,765.7,943.1,325.1h110.2L1319,618.7h43.3") auto;
+  animation:  moveto 10s infinite ease;
+} 
+@keyframes moveto{
+  0%{
+      offset-distance: 0%
+  }
+  100%{
+      offset-distance: 100%;
+  }}

@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}" />
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" /> {% endcomment %}
+   
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>AGORA</title>
+    <style>
+      #AGORA{
+        color: black;
+      }
+     .btn{
+       height: 38px;
+     }
+     #search {
+       top: 20px;
+     }
+     #table {
+       width: 100%;
+       height: 100%;
+     }
+    thead {
+     height: 50px;
+    }
+    td {
+      height: 35px;
+    }
+
+    ul{
+      list-style:none;
+      padding: 0;
+      }
+    
+      
+    
+    
+      #slide, #panel {
+          padding: 15px 0px;
+          text-align: center;
+          background-color: white;
+          border-left: solid 3px black;
+          border-bottom: solid 3px black; 
+          width: 20%;
+          height: 50%;
+          
+          /* border-top-left-radius: 10%;
+          border-top-right-radius: 10%; */
+      }
+      /* #penel의 스타일의 기본이 display:none으로 되어 있다.  */
+      #panel {
+          padding: 0px;
+          display: none;
+          background-color: white; 
+          /* border-bottom-left-radius: 10%;
+          border-bottom-right-radius: 10%; */
+          
+      }
+      .makright{
+        position: relative;
+        left: 81.5%;
+        top: 0px;
+    }
+    #textform {
+      margin-left: 20px;
+      width: 500px;
+    }
+    #answerform {
+      margin-left: 20px;
+      width: 50%;
+    }
+    #saveform {
+      margin-left: 30px;
+    }
+
+.item1 { grid-area: header;
+  padding:30px;border-width: 3px;
+  font-size:40px;
+  text-align: left;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-top-style: solid;
+}
+.item1-1 {grid-area: header2;
+  border-width: 3px;
+  font-size:30px; 
+  font-color:black;
+  text-align: left;
+  border-top-style: solid;
+  float:right;}
+.item2 { grid-area: menu; 
+  border-width: 3px;
+  border-top-style:solid; }
+.item3 { grid-area: main;
+  border-width: 3px;
+  font-size:30px; 
+  border-bottom-style:solid;
+  border-top-style:solid;
+  overflow:auto;
+  border-left-style:solid; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer;
+  font-size:20px;
+  border-width: 3px;
+  border-bottom-style:solid;
+  border-left-style:solid;
+  overflow:auto;}
+.item6 { 
+  grid-area: footer2;
+  font-size:30px;
+  border-width:3px;
+  border-bottom-style:solid;
+  border-left-style:solid;}
+.item7 { 
+  content-align: center;
+  gird-area: footer3; 
+  font-size:15px;
+  border-width: 3px;
+  border-bottom-style:solid;
+  overflow: auto;
+}
+.item8 { grid-area: footer5; }
+.item9 { grid-area: footer4;
+  font-size:72px;
+  border-width: 3px;
+  border-left-style:solid;}
+.item10 { grid-area: footer6;
+  font-size:72px;
+  border-width: 3px;
+  border-left-style:solid;}
+
+
+.grid-container {
+  display: grid;
+  margin: 0;
+  grid-template-areas:
+    'header header header header header header2'
+    'menu main main main main main'
+    'footer3 footer footer footer footer footer2'
+    'footer4 footer5 footer5 footer5 footer5 footer6';
+
+  gap: 0px;
+  grid-template-rows: [item1] 60px [item2] 530px [item3] 80px [item8] 20px;
+  grid-template-columns: 15% 15% 15% 15% 25% 15%;
+  background-color: white;
+  padding:0px;
+  width:100%;
+  heigt:100%;
+  margin-top:4px
+  
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family:helvetica;
+  padding: 0;
+  width:100%;
+  heigt:100%;
+  justify-content;
+}
+
+
+    </style>
+  </head> 
+  {% comment %} <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %}
+  <body style="overflow-x: hidden">
+    {% include "navbar.html" %} {% block content %}{% endblock %}
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src={%static "js/pannel.js"%}></script>
+    {% block script %}
+    {% endblock %}
+      </div>
+  </body>
+</html>
