@@ -1,0 +1,99 @@
+{% load static %}
+
+<div id="container-fluid sticky-top" style="height: 50px;">
+  <div id="menu-navbar" class="makright">
+      <!-- 마우스가 올라가는 부분 -->
+      <div></div>
+      <div id="menu-slide">Menu</div>
+      <!-- 처음엔 안보였다 나중에 보이는 부분 -->
+      <div id="menu-panel">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Archive</a>    
+            </li>
+            <li>
+              <a href="#">Game</a>
+            </li>
+            <li>
+              <a href="#">Agora</a>
+            </li>
+            <li>
+              <a href="#">Login</a>
+            </li>
+            <li id="menu-panel-last">
+              <div></div>
+            </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<style>
+
+  #menu-navbar {
+    margin-top:-10px;
+  }
+  #menu-slide {
+    font-size: 72px;
+    color:red;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #menu-slide, #menu-panel {
+    text-align: center;
+    border-left: solid 3px black;
+    border-bottom: solid 3px black;
+    width: 20%;
+    height: 50%;
+  }
+  #menu-panel {
+    display: none;
+    padding: 0px;
+  }
+  #menu-panel li {
+    border-bottom: solid black 3px;
+    font-size: 56px; 
+    padding-top: 20px;
+    padding-bottom: 22px;
+  }
+  #menu-panel a {
+    color: black;
+  }
+  #menu-panel-last {
+    border-bottom:solid black 3px;
+    padding-top: 20%;
+    padding-bottom: 80%;
+  }
+
+</style>
+
+<script>
+
+$(document).ready(function() {
+    var timer;
+    
+    // navbar slide 마우스over시 
+    $("#menu-slide").mouseenter(function() {  
+
+         timer = setTimeout(function() {         //딜레이를 설정하면서 (0.1초) 해당 시간 후에 아래와 같은 동작을 함 
+            $("#menu-panel").not(':animated')    //에니메이션이 Queue에 쌓이는 것을 방지하기 위해서  not(':animated')설정을 해준다.
+            .slideDown(500)                     //display가 none에서 block으로 바뀌면서 슬라이드 효과가 생기면서 보여지게 됨
+         }, 100);           
+    })
+
+    // navbar 영역 마우스leave시 
+    $("#menu-navbar").mouseleave(function() {       //#menu에 mouseleave이벤트를 만듬
+         clearTimeout(timer);                      //위에서 딜레이를 설정하고 그 시간 안에 mouseleave 이벤트가 일어나면 해당 timer변수가 사라져서
+         $("#menu-panel")                        //mouseenter이벤트 시의 동작이 일어나지 않음
+         .slideUp(500)                      //display가 none에서 block으로 바뀌면서 슬라이드 효과가 생기면서 보여지게 됨
+    })
+
+});
+
+</script>
+
+
+

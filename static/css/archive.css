@@ -1,0 +1,440 @@
+#mouse-pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ee6c4d;
+  transform: translate(-50%, -50%);
+}
+.img1 {
+  top: 400px;
+  left: 200px;
+}
+body {
+  font-family:Helvetica;
+  line-height:180%;
+}
+span.menu {
+  color:#339900;
+  font-weight:normal;
+}
+ /* 이광현파트 */
+ul {
+  list-style:none;
+  padding: 0;
+}
+#slideright1, #panel1 {
+    padding: 10px;
+    text-align: center;
+    /* background-color: white;  */
+    margin:0;
+    width: 10%;
+    height: 10%;
+  }
+#panel1 {
+    margin:0;
+    padding: 10px;
+    display: none;
+    /* background-color: white;  */
+}
+#slideright2, #panel2 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel2 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright3, #panel3 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel3 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright4, #panel4 {
+padding: 10px;
+text-align: center;
+margin:0;
+width: 10%;
+height: 10%;
+}
+#panel4 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright5, #panel5 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel5 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright6, #panel6 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel6 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright7, #panel7 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel7 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright8, #panel8 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel8 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright9, #panel9 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel9 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright10, #panel10 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel10 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+#slideright11, #panel11 {
+    padding: 10px;
+    text-align: center;
+    margin:0;
+    width: 10%;
+    height: 10%;
+}
+#panel11 {
+    margin:0;
+    padding: 10px;
+    display: none;
+}
+
+/* h1단 */
+h1 {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 0;
+    padding: 30px;
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+    h1 {
+    padding: 20px;
+    font-size: 40px;
+    }
+}
+h1 span {
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+    transform: translate(20%, 100%);
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.03em;
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+h1 span:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    transform: translateY(-40%);
+    transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+}
+h1 span.row {
+    overflow: hidden;
+    line-height: 0.9;
+    display: block;
+    transform: none;
+}
+h1 span.row:before {
+    display: none;
+}
+h1 .animate {
+    transform: translate(0, 0);
+}
+h1 .animate:before {
+    transform: translateY(100%);
+}
+
+
+/* h1단 */
+/* h2단 */
+h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+
+    margin: 0;
+    padding: 30px;
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+    h2 {
+        padding: 20px;
+        font-size: 40px;
+    }
+}
+h2 span {
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+    transform: translate(20%, 100%);
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.03em;
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+h2 span:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    transform: translateY(-40%);
+    transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+}
+h2 span.row {
+    overflow: hidden;
+    line-height: 0.9;
+    display: block;
+    transform: none;
+}
+h2 span.row:before {
+    display: none;
+}
+h2 .animate {
+    transform: translate(0, 0);
+}
+h2 .animate:before {
+    transform: translateY(100%);
+}
+
+/* h2단 */
+/* hi단 */
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+fading {
+    background: transparent;
+    overflow: hidden;
+    font: 1vw/10vh "Finger Paint";
+    text-align: center;
+    color: black;
+    backface-visibility: hidden;
+}
+hi span {
+    display: inline-block;
+    text-shadow: 0 0 0 whitesmoke;
+    animation: smoky 5s 3s both;
+}
+
+hi span:nth-child(even) {
+    animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+    60% {
+        text-shadow: 0 0 40px whitesmoke;
+    }
+    to {
+        transform: translate3d(4rem, -3rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+        text-shadow: 0 0 20px whitesmoke;
+        opacity: 0;
+    }
+}
+@keyframes smoky-mirror {
+    60% {
+        text-shadow: 0 0 40px whitesmoke;
+    }
+    to {
+        transform: translate3d(5rem, -3rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+        text-shadow: 0 0 20px whitesmoke;
+        opacity: 0;
+    }
+}
+hi span:nth-of-type(1) {
+    animation-delay: 3.1s;
+}
+hi span:nth-of-type(2) {
+    animation-delay: 3.2s;
+}
+hi span:nth-of-type(3) {
+    animation-delay: 3.3s;
+}
+hi span:nth-of-type(4) {
+    animation-delay: 3.4s;
+}
+hi span:nth-of-type(5) {
+    animation-delay: 3.5s;
+}
+hi span:nth-of-type(6) {
+    animation-delay: 3.6s;
+}
+hi span:nth-of-type(7) {
+    animation-delay: 3.7s;
+}
+hi span:nth-of-type(8) {
+    animation-delay: 3.8s;
+}
+hi span:nth-of-type(9) {
+    animation-delay: 3.9s;
+}
+hi span:nth-of-type(10) {
+    animation-delay: 4s;
+}
+hi span:nth-of-type(11) {
+    animation-delay: 4.1s;
+}
+span:nth-of-type(12) {
+    animation-delay: 4.2s;
+}
+hi span:nth-of-type(13) {
+    animation-delay: 4.3s;
+}
+hi span:nth-of-type(14) {
+    animation-delay: 4.4s;
+}
+hi span:nth-of-type(15) {
+    animation-delay: 4.5s;
+}
+hi span:nth-of-type(16) {
+    animation-delay: 4.6s;
+}
+hi span:nth-of-type(17) {
+    animation-delay: 4.7s;
+}
+hi span:nth-of-type(18) {
+    animation-delay: 4.8s;
+}
+hi span:nth-of-type(19) {
+    animation-delay: 4.9s;
+}
+hi span:nth-of-type(20) {
+    animation-delay: 5s;
+}
+hi span:nth-of-type(21) {
+    animation-delay: 5.1s;
+}
+hi span:nth-of-type(22) {
+    animation-delay: 5.2s;
+}
+hi span:nth-of-type(23) {
+    animation-delay: 5.3s;
+}
+hi span:nth-of-type(24) {
+    animation-delay: 5.4s;
+}
+hi span:nth-of-type(25) {
+    animation-delay: 5.5s;
+}
+hi span:nth-of-type(26) {
+    animation-delay: 5.6s;
+}
+hi span:nth-of-type(27) {
+    animation-delay: 5.7s;
+}
+hi span:nth-of-type(28) {
+    animation-delay: 5.8s;
+}
+
+/* hi단 */
+.homepad{
+    position:static;    
+}
+.makright{
+    position: relative;
+    left: 81.5%;
+    top: 0px;
+}
+.makright2{
+    position: relative;
+    left:77%;
+    top:50px;
+}
+input{
+    background-color: black;
+    color:white;
+    font-size:15px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 2em;
+    display: inline-block;
+    transition: background 0.5s ease-in-out,color 0.5s ease-in-out;
+}
+input:hover {
+    background-color: white;
+    color: black;
+}
+
+.pic { position: absolute; }
+
+/* 공을 선택했을 때, 그림자가 생기도록 설정 */
+.pic:hover { box-shadow: 0 0 10px 0 darkgray; cursor: pointer; } 
+
+footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 140px;
+    color: #fff;
+}
+#btn-darkmode {
+    position: relative;
+    left: 95%;
+    margin-bottom: 10%;
+}

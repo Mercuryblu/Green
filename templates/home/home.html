@@ -1,0 +1,51 @@
+{% load static %} 
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src={% static "js/p5.js" %}></script>
+  <script src={% static "js/p5.sound.min.js" %}></script>
+  <link rel="stylesheet" type="text/css" href={% static "css/home.css" %}>
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+
+<body>
+
+  <div id="div_home_menu">
+    <a href="#">Login</a>
+    <a href="#">Agora</a>
+    <a href="#">Archive</a>
+    <a href="#">Game</a>
+  </div>
+
+  <div content>
+    <script src={% static "js/home_sketch.js" %}></script>
+
+    <div class="line01">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336 730">
+        <path d="M439.96,816.73l540.48-597.45h107.25L1305.33-21.3" />
+      </svg>
+    </div>
+
+    <div class="line02">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336 730">
+        <path d="M386.94,333.07,142.76,603v37.28" />
+      </svg>
+    </div>
+
+    <div class="line00">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336 730">
+        <path d="M544.5,765.7,943.1,325.1h110.2L1319,618.7h43.3" />
+      </svg>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+{% endblock %}
