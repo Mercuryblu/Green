@@ -9,104 +9,55 @@
   
   <title>Quiz</title>
   
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/quizlist.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}" />
-  <link rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-        crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <script type='text/javascript'>
-
-    window.onpageshow = function (event) {
-      if (event.persisted) {
-        console.log(event.persisted)
-        document.getElementById('a').checked = false;
-      }
-    }
-    
-  </script>
-
-  <style>
-    html, body {
-      width: 100%;
-      height: 100%;
-    }
-    .container {
-      width: 100%;
-      height: 100%;
-      background: white;
-    }
-    body{
-      margin: 0;
-    }
-    table{
-      background-color: white;
-      width: 100%;
-      height: 100%;
-    }
-    #img:hover{
-      background-image: url('{% static "img/move2.gif" %}');
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: red;
-    }
-    table{
-      text-align: center;
-    } 
-    th, tr{
-      text-align: center;
-    }
-    .switch {
-      position:absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-    ul{
-      list-style:none;
-      padding: 0;
-    }
-    #slide, #panel {
-      padding: 15px 0px;
-      text-align: center;
-      background-color: white;
-      border-left: solid 3px black;
-      border-bottom: solid 3px black; 
-      width: 20%;
-      height: 50%;
-    }
-      /* #penel의 스타일의 기본이 display:none으로 되어 있다.  */
-    #panel {
-      padding: 0px;
-      display: none;
-      background-color: white; 
-      /* border-bottom-left-radius: 10%;
-      border-bottom-right-radius: 10%; */    
-    }
-    .makright{
-      position: relative;
-      left: 81.5%;
-      top: 0px;
-    }
-
-  </style>
+  <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/common.js' %}"></script>
 </head>
+
+<script type='text/javascript'>
+  
+  $(document).ready(function(){
+    setImgboxMousehover();
+  });
+
+  window.onpageshow = function (event) {
+    if (event.persisted) {
+      console.log(event.persisted)
+      document.getElementById('a').checked = false;
+    }
+  }
+
+  function setImgboxMousehover(){
+    $("#img").hover(function(){
+      $(this).css("background-image", "url(/static/img/move2.gif)");
+      $(this).css("background-repeat", "no-repeat");
+      $(this).css("background-size", "cover");
+      $(this).css("color", "red");
+
+    }, function(){
+      $(this).css("background-image", "");
+      $(this).css("background-repeat", "");
+      $(this).css("background-size", "");
+      $(this).css("color", "");
+    });
+  }
+  
+</script>
 
 <body style="overflow-y: hidden; overflow-x: hidden">
 
   {% include "navbar.html" %} 
   
-  <div class="container">
+  <div class="container-area">
     <table class="table" frame="void" border="2" bordercolor="black" >
       <tbody>
-        <tr>
-          <th style="width:30%; height:80px">
-            <h2 style="font-size:72px">QUIZ</h2>
+        <tr style="height:144px;">
+          <th style="width:30%;">
+            <h2 style="font-size:72px; text-align: center; padding-top: 15px;">QUIZ</h2>
           </th>
           <th style="width:40%"></th>
           <th style="width:30%"></th>

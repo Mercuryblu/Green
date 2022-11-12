@@ -1,0 +1,104 @@
+.form-area {
+    padding-top: 250px;
+    margin: 0px 300px 0px 20px;
+}
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#tb-sorted {
+    width: 100%;
+    display: block;
+}
+#div-search-sorted {
+    width: 100px;
+}
+#div-select-search {
+    display: flex;
+    margin-bottom: 10px;
+}
+#div-search-input {
+    position: relative;
+    display: table;
+    width: 100%;
+    left: 72%;
+}
+.input-layer {
+    font-size: 12px;
+    padding: 0.375rem 0.75rem;
+    font-weight: bolder;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #000000;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 30px;
+} 
+#inp-search {
+    width: 250px;
+}
+#btn_search {
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 0px 0px 5px;
+}
+.div-table-area {
+    margin: 0px 300px 0px 20px;
+}
+.tb-pagiantion {
+    width: 80%;
+    height: 100px;
+    display: inline-flex;
+}
+.div-write-button {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    float: right;
+    margin-right: 15px;
+}
+
+/* btn */
+#btn_wirte, #btn_save {
+    color: #f5f5f5;
+    background: black;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 0;
+}
+
+/* agora_wirte */
+
+.div-write-text {
+    width: 100%;
+    height: auto;
+}
+.div-write-area {
+    margin: 0px 200px 0px 200px;
+}
+#div-write-input {
+    width: 100%;
+    margin: 0;
+}
+#inp-write-title {
+    width: 80%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+#inp-write-content {
+    width: 80%;
+    height: 600px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+.div-save-button {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    float: right;
+    margin-right: 247px;
+}

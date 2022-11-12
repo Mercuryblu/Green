@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'quiz',
-    'board',
+    'agora',
     'archive',
     'home',
 ]

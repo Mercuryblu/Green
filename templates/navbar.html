@@ -9,21 +9,21 @@
       <div id="menu-panel">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Archive</a>    
+              <a href="/archive/">Archive</a>    
             </li>
             <li>
-              <a href="#">Game</a>
+              <a href="/quiz/">Game</a>
             </li>
             <li>
-              <a href="#">Agora</a>
+              <a href="/agora/">Agora</a>
             </li>
             <li>
               <a href="#">Login</a>
             </li>
-            <li id="menu-panel-last">
+            <li style="padding-top:80%; padding-bottom:80%;">
               <div></div>
             </li>
           </ul>
@@ -43,11 +43,13 @@
     padding-bottom: 30px;
   }
   #menu-slide, #menu-panel {
+    padding-top: 15px;
     text-align: center;
     border-left: solid 3px black;
     border-bottom: solid 3px black;
     width: 20%;
     height: 50%;
+    background: white;
   }
   #menu-panel {
     display: none;
@@ -56,16 +58,19 @@
   #menu-panel li {
     border-bottom: solid black 3px;
     font-size: 56px; 
-    padding-top: 20px;
-    padding-bottom: 22px;
+    padding: 10px 0px;
   }
   #menu-panel a {
     color: black;
   }
-  #menu-panel-last {
-    border-bottom:solid black 3px;
-    padding-top: 20%;
-    padding-bottom: 80%;
+  .makright {
+    position: relative;
+    left: 81.5%;
+    top: 0px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
 </style>

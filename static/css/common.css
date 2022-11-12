@@ -1,10 +1,21 @@
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
-    line-height: 1.42857143;
     color: #333;
     background-color: #fff;
 }
 div {
     display: block;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.container-area {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -40px; 
+    padding: 0px; 
+    width: 100%; 
+    height: 100%;
 }
