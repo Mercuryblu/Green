@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/agora.css' %}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+        
+        <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        
+        <title>AGORA</title>
+    </head>
+    
+    <body style="overflow-x:hidden">
+
+        {% include "navbar.html" %} 
+
+        <div class="container-area">
+            
+            <div style="font-size: 72px;position:absolute;left:15px">Agora</div>
+            
+            <div class="form-area">
+                <div id="div-write-text">
+                    <p><MARQUEE>전기절약으로 지구가 행복해해요</MARQUEE></p>
+                    <p><MARQUEE scrolldelay="100" direction="right">전기절약 습관으로 부자가 될 수 있습니다.</MARQUEE></p>
+                </div>
+            </div>
+
+            <div class="div-write-area">
+                <div id="div-write-input">
+                    <h2 id="inp-write-title">{{post.title}}</h2>
+                    <p id="inp-write-content">{{post.contents}}</p>
+                </div>
+            </div>
+
+            <div class="div-save-button">
+                <a href="agora/" class="btn" type="button" id="btn_save">
+                    <i class="fas fa-pen"></i>
+                </a>
+            </div>
+        </div>
+    </body>
+
+    <script type='text/javascript'>
+
+    </script>
+
+</html>

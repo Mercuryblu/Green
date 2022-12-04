@@ -1,0 +1,55 @@
+{% load static %} 
+
+<!DOCTYPE html>
+
+<html lnag="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="{%static 'css/login.css' %}" />
+    
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  </head>
+
+  <body style="background: url('/static/img/login_bg.png') no-repeat center; background-size:cover;">
+    <main>
+      <h3 class="swing"><strong>301D🤢😡🌏🐶</strong> internet homepage</h3>
+      <form action="" method="POST">
+            {% csrf_token %}
+            <div class="int-area">
+            <input type="text" name="username" id="id" autocomplete="off" required />
+            <label for="id">USER NAME</label>
+            </div>
+            <div class="int-area">
+            <input type="password" name="password" id="pw" autocomplete="off" required />
+            <label for="pw">PASSWORD</label>
+            </div>
+            <div class="int-area">
+            <input type="text" name="firstname" id="id" autocomplete="off" required />
+            <label for="id">FIRSTNAME</label>
+            </div>
+            <div class="int-area">
+            <input type="text" name="lastname" id="id" autocomplete="off" required />
+            <label for="id">LASTNAME</label>
+            </div>
+            <div class="int-area">
+            <input type="text" name="email" id="id" autocomplete="off" required />
+            <label for="id">E-MAIL</label>
+            </div>
+            <div class="btn-area">
+            <button id="btn" type="submit">SIGN UP</button>
+            </div>
+        </form>
+        <p><strong>created by</strong> 301D</p>
+    </main>
+
+    <script>
+      var t = document.getElementsByTagName("main")[0];
+      document.documentElement.onmousemove = function (e) {
+        t.style.webkitTransform = t.style.transform = "rotate3d(10, 180, -6, " + e.pageX / -20 + "deg)";
+      };
+    </script>
+  </body>
+</html>

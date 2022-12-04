@@ -31,7 +31,7 @@
                     <div id="div-select-search">
                         <div id="div-search-sorted">
                             <!-- <i class='fas fa-sort'></i> -->
-                            <select class="input-layer" name="tb-sorted" id="tb-sorted">
+                            <select class="input-layer" name="sortBy" id="tb-sorted">
                                 <option value="recent"> 최신순 </option>
                                 <option value="recommend"> 추천순 </option>
                                 <option value="popular"> 댓글순 </option>
@@ -40,7 +40,7 @@
                         </div>
     
                         <div id="div-search-input">
-                            <input type="text" class="input-layer" name="inp-search" id="inp-search" value="">
+                            <input type="text" class="input-layer" name="keyword" id="inp-search" value="">
                             <button class="btn" type="button" id="btn_search">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -64,6 +64,16 @@
                     </thead>
 
                     <tbody class="tb-write-list">
+                        {% for list in agora_list %}
+                        <tr>
+                            <td></td>
+                            <td><a href="{{list.pk}}">{{list.title}}</a>></td>
+                            <td>{{list.writer}}</td>
+                            <td>{{list.wirteDt}}</td>
+                            <td>{{list.likes}}</td>
+                            <td>{{list.hits}}</td>
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
 

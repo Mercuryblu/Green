@@ -5,5 +5,6 @@ app_name = "agora"
 
 urlpatterns = [
     path('', views.agora_view, name='agora'),
-    path('/write', views.agora_write, name="write"),
+    path('<int:pk>/', views.view_agora_post, name='agora_post'),
+    path('write/', views.agora_write, name="write"),
 ]

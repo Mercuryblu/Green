@@ -26,14 +26,15 @@
             
             <div style="font-size: 72px;position:absolute;left:15px">Agora</div>
             
-            <form id="form-agora-wirte">
             <div class="form-area">
                 <div id="div-write-text">
                     <p><MARQUEE>전기절약으로 지구가 행복해해요</MARQUEE></p>
                     <p><MARQUEE scrolldelay="100" direction="right">전기절약 습관으로 부자가 될 수 있습니다.</MARQUEE></p>
                 </div>
             </div>
-                
+
+            <form id="form-agora-wirte" method="POST">
+            {% csrf_token %}
             <div class="div-write-area">
                 <div id="div-write-input">
                     <input type="text" class="input-layer" name="inp-write-title" id="inp-write-title" placeholder="TITLE">
@@ -42,7 +43,7 @@
 
                 <!-- 저장 -->
                 <div class="div-save-button">
-                    <a href="{% url 'agora:write' %}" class="btn" type="button" id="btn_save">
+                    <a href="{% url 'agora:agora' %}" class="btn" type="button" id="btn_save">
                         <i class="fas fa-pen"></i>
                     </a>
                 </div>
@@ -53,11 +54,6 @@
 
     <script type='text/javascript'>
 
-        // $(document).ready(function(){
-
-
-            
-        // })
     </script>
 
 </html>

@@ -1,0 +1,82 @@
+{% load static %} 
+
+<!DOCTYPE html>
+
+<html lnag="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{%static 'css/login.css' %}" />
+    
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  </head>
+  
+  <body style="background: url('/static/img/login_bg.png') no-repeat center; background-size:cover;">
+    <main>
+      <h3 class="swing"><strong>301D</strong>🌳🌻🌏🌈</h3>
+      <iframe
+        width="100%"
+        height="170"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097443003&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <section class="login-form">
+        <h1>Login</h1>
+        {% if user.is_authenticated %} 
+            로그인성공 {{ user.username }}님 환영합니다.
+            <a href="{% url 'users:logout' %}">로그아웃</a>
+            <a href="{% url 'home:home' %}">메인페이지로 이동</a>
+        {% else %}
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="int-area">
+            <input type="text" name="username" id="id" autocomplete="off" required />
+            <label for="id">USER NAME</label>
+          </div>
+          <div class="int-area">
+            <input type="password" name="password" id="pw" autocomplete="off" required />
+            <label for="pw">PASSWORD</label>
+          </div>
+          <div class="btn-area">
+            <button id="btn" type="submit">Login</button>
+          </div>
+        </form>
+        <div class="captioon">
+          <a href="{% url 'users:sign-up' %}">Sign Up</a>
+        </div>
+        {% endif %}
+      </section>
+      <p><strong>created by 301D</strong></p>
+    </main>
+
+    <script>
+      let id = $("#id");
+      let pw = $("#pw");
+      let btn = $("#btn");
+
+      $(btn).on("click", function () {
+        if ($(id).val() == "") {
+          $(id).next("label").addClass("warning");
+          setTimeout(function () {
+            $("label").removeClass("warning");
+          }, 1500);
+        } else if ($(pw).val() == "") {
+          $(pw).next("label").addClass("warning");
+          setTimeout(function () {
+            $("label").removeClass("warning");
+          }, 1500);
+        }
+      });
+    </script>
+    <script>
+      var t = document.getElementsByTagName("main")[0];
+      document.documentElement.onmousemove = function (e) {
+        t.style.webkitTransform = t.style.transform = "rotate3d(10, 180, -6, " + e.pageX / -20 + "deg)";
+      };
+    </script>
+    
+  </body>
+</html>
